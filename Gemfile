@@ -10,5 +10,9 @@ gem 'spree', spree_version
 gem 'spree_auth_devise', spree_version
 gem 'rails-controller-testing'
 
+group :development, :test do
+  gem 'spree_dev_tools'
+  gem 'pg'
+end
 
 gemspec
