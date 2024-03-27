@@ -1,7 +1,7 @@
 class Spree::FeedbackReview < ActiveRecord::Base
   belongs_to :user, class_name: Spree.user_class.to_s
-  belongs_to :review, dependent: :destroy
-
+  belongs_to :review
+  
   validates :review, presence: true
   validates :rating, numericality: {
     only_integer: true,
